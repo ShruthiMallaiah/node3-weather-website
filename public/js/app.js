@@ -12,7 +12,7 @@ weatherForm.addEventListener("submit", (e) => {
   p1.textContent = "Loading...";
   p2.textContent = ""; // To clear previous values
 
-  fetch(`http://localhost:3000/weather?address=${location}`).then((res) => {
+  fetch(`/weather?address=${location}`).then((res) => {
     res.json().then((data) => {
       if (data.error) {
         p1.textContent = data.error;
